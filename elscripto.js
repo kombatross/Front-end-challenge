@@ -8,16 +8,9 @@ async function name_albums() {
     const entry = feed.entry;
     for (i = 0; i < 100; i++) {
         var choice = entry[i];
-        var titles = (choice['im:name'])
-        document.getElementById("Titles_place1").innerHTML += '<li> <a href=#"' + titles.label + '">' + titles.label + ' <br> <br> ';
-        document.getElementById("Titles_place").innerHTML += titles.label + "<br> <br> <div class='dropdown-divider'></div>";
-    }
-
-
-
-
-
-    console.log(titles)
+        var titles = choice['im:name'].label;
+        document.getElementById("Titles_place1").innerHTML += '<li> <a href=#' + titles + '>' + titles + ' <br> <br> ';
+        document.getElementById("Titles_place").innerHTML += '<a name=' + titles + '>'+ titles + '<br> <br> <div id="Photo_place'+[i]+'"></div>  <div class="dropdown-divider"></div> ';    }
 }
 name_albums();
 
@@ -28,10 +21,12 @@ async function photo_albums() {
     const entry = feed.entry;
     for (i = 0; i < 100; i++) {
         var choice = entry[i];
-        var photos = (choice['im:image']);
-        document.getElementById("Photo_place").innerHTML += "<img src=" + photos.label + ">";
+        var photos = choice['im:image'][2].label;
+        document.getElementById("Photo_place"+[i]).innerHTML += '<img src="'+photos+'">';
+        console.log(photos);
 
     }
-
-
 }
+photo_albums();
+
+
