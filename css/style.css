@@ -1,8 +1,10 @@
 body {
-    background: lightgray;
+    background-image: url("/img/cardboard.png");
     color: white;
-    background-size: 100vw 100vh;
-   
+}
+
+.navback {
+    background-image: url("/img/binding_dark.png");
 }
 
 .blackFont {
@@ -14,12 +16,25 @@ a {
     color: white;
 }
 
-
-.list{
+.list {
+    height: 100vh;
     overflow: hidden;
-    overflow-y:scroll;
-}
-.menu{
-    
     overflow-y: scroll;
+}
+
+.menu {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.lower_width {
+    width: 170px;
+}
+
+.shadow {
+    box-shadow: 0px 0px 20px -2px black !important;
+}
+
+.radius {
+    border-radius: 20px;
 }
