@@ -1,6 +1,7 @@
 body {
     background-image: url("/img/cardboard.png");
     color: white;
+    scroll-behavior: smooth;
 }
 
 .navback {
@@ -18,13 +19,18 @@ a {
 
 .list {
     height: 100vh;
-    overflow: hidden;
     overflow-y: scroll;
 }
 
 .menu {
     height: 100vh;
     overflow-y: scroll;
+}
+
+@media (max-width: 767px) {
+    .menu {
+        display: none;
+    }
 }
 
 .lower_width {
@@ -37,4 +43,56 @@ a {
 
 .radius {
     border-radius: 20px;
+}
+
+img:hover {
+    transition: 0.3s;
+    filter: brightness(50%);
+}
+
+#button:hover {
+    transition: 0.3s;
+    background-color: rgba(65, 64, 64, 0.603);
+}
+
+.bg-gray {
+    background-color: rgba(255, 255, 255, 0.603);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    transition: 0.5s;
+    background: #555;
+}
+
+.button {
+    width: 128px;
+}
+
+.photos {
+    height: 60px;
+    width: 60px;
+}
+
+@media (max-width: 500px) {
+    .button {
+        display: none;
+    }
+    .hey {
+        justify-content: flex-start !important;
+    }
+    img {
+        margin-right: 5px
+    }
 }
