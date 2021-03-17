@@ -15,7 +15,7 @@ async function name_albums() {
         var price = choice['im:price'].label;
         var link = choice.link.attributes.href
         document.getElementById("Titles_place1").innerHTML += '<li> <a href=#' + titles + '>' + titles + ' - ' + artist + ' <br> <br> ';
-        document.getElementById("Titles_place").innerHTML += '<div class= "hey d-flex justify-content-between "> <div class=" col-8"> <a name=' + titles + '><b>' + (i + 1) + ' - ' + titles + '</b> - ' + artist + '<br> Release Date: ' + release + '</a> </div><a role="button" class="button btn bg-dark text-white" href="' + link + '" target=blank>Buy ' + price + '</a> <div class= "photos mr-2 col-2 order-first animated fadeIn " id="Photo_place' + [i] + '"> </div></div> <div class="dropdown-divider"></div > ';
+        document.getElementById("Titles_place").innerHTML += '<div class= "hey d-flex justify-content-between "> <div class=" col-8"> <a name=' + titles + '><b>' + (i + 1) + ' - ' + titles + '</b> - ' + artist + '<br> Release Date: ' + release + '</a> </div><a role="button" class="button btn bg-dark text-white" href="' + link + '" target=blank>Buy ' + price + '</a> <a class="photos mr-2 col-2 order-first animated fadeIn" href="' + link + '"> <div class= "photos mr-2 col-2 order-first animated fadeIn " id="Photo_place' + [i] + '"> </div></a></div> <div class="dropdown-divider"></div > ';
     }
 }
 name_albums();
